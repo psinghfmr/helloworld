@@ -1,5 +1,5 @@
 
-  node('docker')
+  node('maven-jdk-8')
   stages {
     stage('build') {
       steps {
