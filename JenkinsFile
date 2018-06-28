@@ -1,9 +1,10 @@
 
-  node('maven-jdk-8')
+  node('maven-jdk-8') {
   stages {
     stage('build') {
       steps {
-        sh 'mvn -version'
+        sh 'mvn --version'
         }
        }
      }
+  }
