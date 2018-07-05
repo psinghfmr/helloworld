@@ -1,18 +1,26 @@
 pipeline {
-  agent {
-    docker {
-      image 'docker'
-    }
-    
-  }
-  stages {
-    stage('DIT') {
-      steps {
-        echo 'This is DIT env'
-      }
-    }
-  }
-  environment {
-    DEV = ''
-  }
+	
+	agent { label 'maven-jdk-8' }
+	
+	stages {
+		stage ('Compile Stage') {
+			
+			steps {
+				sh 'mvn --version'
+			}
+		}
+		
+		stage ('Testing Stage') {
+			steps {
+				sh 'mvn --version'
+			}
+		}
+		
+		stage ('Deployment Stage') {
+			steps {
+				sh 'mvn --version'
+			}
+		}
+	}
+
 }
